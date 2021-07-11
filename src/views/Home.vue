@@ -1,18 +1,31 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+    <div class="home">
+        <img alt="Vue logo" src="../assets/logo.png">
+        <vpay
+            ref="pays"
+            v-model="show"
+            @close="close"
+            @forget="forget"
+            @input-end="inputEnd"
+        ></vpay>
+    </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
 export default {
-  name: 'Home',
-  components: {
-    HelloWorld
-  }
+    name: 'Home',
+    data() {
+        return{
+            show: true
+        }
+    },
+    methods: {
+        forget() {
+        },
+        inputEnd() {
+        },
+        close() {
+        },
+    }
 }
 </script>
